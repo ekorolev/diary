@@ -31,7 +31,7 @@
 		<script id="book" type="text/ractive">
 		  {{#books}}
 				<li>
-					<div class="element" id="{{_id}}">
+					<div class="element" id="{{_id}}" on-click="show">
 						<div class="image">
 						</div>
 						<div class="info">
@@ -64,10 +64,8 @@
 		</script>
 
 		<script id="bookslist_view" type="text/ractive">
-			<div id="bookslist">
 				Книги: 
 				<ul>{{>books}}</ul>
-			</div>
 		</script>
 	<body>
 		<div id="wrapper">
@@ -75,8 +73,14 @@
 
 			</div>
 			<div class="mainCont">
-				<div class="search"></div>
-				<div class='content'>
+				<div class="search">
+					<form>
+						<input  class="searchDesign" placeholder="Search by books...">
+						
+						</input>
+					</form>
+				</div>
+				<div class='listData'>
 
 				</div>
 			</div>

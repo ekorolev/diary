@@ -17,7 +17,12 @@ var BooksListView = Backbone.View.extend({
 			complete: function () {
 
 			}
-		})
+		});
+
+		window.BooksListViewR.on("show", function (event) {
+			var id = $(event.node).attr('id');
+			window.location.href = '#/dashboard/'+id
+		});
 	},
 	load: function (cb) {
 
