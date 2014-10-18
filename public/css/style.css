@@ -1,0 +1,101 @@
+*
+{
+	margin:0;
+	padding:0;
+	border:0;
+}
+li
+{
+	position:relative;
+	display:inline-block;
+	width:45%;
+	margin-left:20px;
+	margin-top:20px;
+}
+html,body
+{
+	height:100%;
+}
+ul
+{
+	list-style-type:none;
+}
+
+#wrapper
+{
+	width : 100%;
+	min-height:100%;
+	background-color:red;
+	position: relative;
+ }
+ .sideBar
+ {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20%;
+	height:100%;
+	background-color:gold;
+ }
+ .mainCont
+ {
+	position:relative;
+	margin-left:20%;
+	background-color:black;
+	height:100%;
+ }
+ .search
+ {
+	position:relative;
+	height:10%;
+ 	background-color:red;
+ }
+ .listData
+ {
+		position:relative;
+		margin-top:0px;
+		background-color:white;
+		height:90%;
+ }
+ .element
+ {
+ 	position:relative;
+	background-color:blue;
+ }
+ .image
+ {
+	float: left;
+	position:relative;
+	width:100px;
+	height:100px;
+	background-color:green;
+ }
+ .info
+ {
+	position:relative;
+	display:inline-block;
+ }
+ .autor
+ { 	
+	position:relative;
+	text-align:center;
+	background-color:orange;
+ }
+ .ganre
+ {
+ 	position:relative;
+	text-align:center;
+	background-color:white;
+ }
+ .year
+ {
+ 	position:relative;
+	text-align:center;
+	background-color:orange;
+ }
+ .discription
+ {
+ 	position:relative;
+	text-align:center;
+	background-color:white;
+ }

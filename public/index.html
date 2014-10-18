@@ -2,7 +2,7 @@
 <html>
 	<head>
 	</head>
-
+		<link rel='stylesheet' type='text/css' href='/css/style.css'>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js'></script>
@@ -13,6 +13,7 @@
 		<script src='/js/view/dashboard.js'></script>
 		<script src='/js/view/bookslist_view.js'></script>
 		<script src='/js/view/book_view.js'></script>
+		<script src='/js/view/sidebar_view.js'></script>
 		<script src='/js/app.js'></script>
 
 		<script id='login' type='text/ractive'>
@@ -22,25 +23,37 @@
 		</script>
 
 		<script id='dashboard' type='text/ractive'>
-			<div id="dashboardView">
-				{{>sidebar}}
-				dashboard
-				<div id="innerContent"></div>
-			</div>
+			{{>sidebar}}
+			dashboard
+			<div id="innerContent"></div>
 		</script>
 
 		<script id="book" type="text/ractive">
 		  {{#books}}
-			  <div class="book">
-			  	{{name}}, {{_id}}
-			  </div>
+				<li>
+					<div class="element" id="{{_id}}">
+						<div class="image">
+						</div>
+						<div class="info">
+							<p class="autor">
+								{{name}}
+							</p>
+							<p class="ganre">
+								{{author}}
+							</p>
+							<p class="year">
+								year
+							</p>
+							<p class="discription">
+							</p>
+						</div>
+					</div>
+				</li>
 		  {{/books}}
 		</script>
 
 		<script id="sidebar" type="text/ractive">
-			<div id="sidebar">
-
-			</div>
+			sidebar
 		</script>
 
 		<script id="book_view" type="text/ractive">
@@ -53,10 +66,20 @@
 		<script id="bookslist_view" type="text/ractive">
 			<div id="bookslist">
 				Книги: 
-				{{>books}}
+				<ul>{{>books}}</ul>
 			</div>
 		</script>
 	<body>
+		<div id="wrapper">
+			<div class='sideBar'>
 
+			</div>
+			<div class="mainCont">
+				<div class="search"></div>
+				<div class='content'>
+
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
