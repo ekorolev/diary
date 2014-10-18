@@ -21,6 +21,10 @@ html,body
 ul
 {
 	list-style-type:none;
+	background-color:white;
+	margin: 15px;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
 }
 
 #wrapper
@@ -29,7 +33,19 @@ ul
 	min-height:100%;
 	background-color:red;
 	position: relative;
-	background-image: url(../image/books/background4.jpg);
+	background: url(../image/books/background4.jpg) fixed;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+ }
+ #wrapper2
+{
+	width : 100%;
+	min-height:100%;
+	background-color:red;
+	position: relative;
+	background: url(../image/books/background4.jpg) fixed;
 	-moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -70,7 +86,7 @@ ul
  {
 	position:relative;
 	margin-left:20%;
-	height:100%;
+	margin-bottom:0px;
 	z-index:3;
  }
  .backFadeSearch
@@ -79,7 +95,7 @@ ul
 	top:0;
 	left:0;
 	width:100%;
-	height:6%;
+	height:50px;
 	z-index:2;
 	opacity: 0.4;
 	background-color: #fff;
@@ -87,13 +103,13 @@ ul
  .search
  {
 	position:relative;
-	height:6%;
+	height:50px;
  	z-index:3;
 	
  }
  .searchDesign
  {
-	margin-top:0.5%;
+	margin-top:13px;
 	margin-left:60%;
 	width:250px;
 	height:25px;
@@ -102,7 +118,7 @@ ul
  .searchImage
  {
 	position:absolute;
-	top:4%;
+	top:10px;
 	right: 14%;
 	background: url(../image/lupa.png);
 	border:none;
@@ -114,12 +130,11 @@ ul
  {
 		position:relative;
 		margin-top:0px;
-		height:92%;
  }
  .element
  {
  	position:relative;
-	height:25%;
+	height:150px;
 
  }
  .image
@@ -141,7 +156,6 @@ ul
  { 	
 	position:relative;
 	text-align:left;
-	background-color:white;
 	height:25%;
 	padding-left:15px;
  }
@@ -149,7 +163,6 @@ ul
  {
  	position:relative;
 	text-align:left;
-	background-color:white;
 	height:25%;
 	padding-left:15px;
  }
@@ -157,7 +170,6 @@ ul
  {
  	position:relative;
 	text-align:left;
-	background-color:white;
 	height:25%;
 	padding-left:15px;
  }
@@ -165,7 +177,6 @@ ul
  {
  	position:relative;
 	text-align:left;
-	background-color:white;
 	height:25%;
 	padding-left:15px;
  }
@@ -179,7 +190,7 @@ ul
 		position:absolute;
 		top:0;
 		left:0;
-		height: 20%;
+		height: 50px;
 		width:100%;
 	z-index:2;
 	opacity: 0.4;
@@ -187,9 +198,9 @@ ul
 	 }
  .proFileTitle
  {
- top:3%;
+ top:10px;
 		position:relative;
-		height: 20%;
+		height: 50px;
 		text-align:center;
 		font-family:"Oswald";
 		z-index:3;
@@ -202,8 +213,8 @@ ul
  .proBut
  {
 	position:absolute;
-	bottom:8%;
-	left:37%;
+	bottom:15px;
+	left:100px;
 	padding: 3px 25px; 
 	cursor:pointer;
 	background-color:47B3E2;
@@ -220,7 +231,7 @@ ul
 		position:absolute;
 		top:0;
 		left:0;
-		height: 20%;
+		height: 50px;
 		width:100%;
 	z-index:2;
 	opacity: 0.4;
@@ -229,8 +240,8 @@ ul
   .myDataTitle
  {
 		position:relative;
-		top:3%;
-		height: 20%;
+		top:10px;
+		height: 50px;
 		text-align:center;
 		z-index:3;
 		font-family:"Oswald";
@@ -250,7 +261,7 @@ ul
  		position:absolute;
 		top:0;
 		left:0;
-		height: 20%;
+		height: 50px;
 		width:100%;
 	z-index:2;
 	opacity: 0.4;
@@ -259,8 +270,8 @@ ul
    .bookNewsTitle
  {
 		position:relative;
-		top:5%;
-		height: 15%;
+		top:10px;
+		height: 50px;
 		text-align:center;
 		z-index:3;
 		font-family:"Oswald";
@@ -279,6 +290,7 @@ ul
  .moreImage
  {
 	position:relative;
+	margin-left:15%;
 	width:40%;
 	height:100%;
  }
@@ -294,34 +306,139 @@ ul
  {
 	position:relative;
 	height:25%;
-	background-color:white;
-	text-align:center;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
  }
  .autor1
  {
 	position:relative;
 	height:25%;
-	background-color:black;
-	text-align:center;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
  }
  .year1
  {
- 	position:relative;
+	position:relative;
 	height:25%;
-	background-color:white;
-	text-align:center;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
  }
  .ganre1
  {
- 	position:relative;
+	position:relative;
 	height:25%;
-	background-color:black;
-	text-align:center;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
  }
  .moreDiscription
  {
  		position:relative;
 		width:100%;
 		height:52%;
-		background-color:green;
+		font-size: 20pt;
+ }
+ .backLogin
+ {
+	position:absolute;
+	top:250px;
+	left:34%;
+	width:30%;
+	height:250px;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
+ }
+  .login
+ {
+	position:absolute;
+	top:250px;
+	left:34%;
+	width:30%;
+	height:250px;
+	z-index:3;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
+ }
+ .loginTitle
+ {
+	position:relative;
+	height:50px;
+	top:10px;
+	text-align:center;
+
+ }
+ .loginForm
+ {
+  	position:relative;
+	height:50px;
+	bottom:5px;
+ }
+ .passwordTitle
+ {
+ 	position:relative;
+	height:50px;
+	text-align:center;
+ }
+ .passwordForm
+ {
+   	position:relative;
+	height:50px;
+ }
+ .other
+ {
+   	position:relative;
+	height:50px;
+ }
+ .logBut
+  {
+  position:absolute;
+  left:108px;
+font-family: 'Roboto', sans-serif;
+font-size: 14px;
+font-weight: 700;
+padding: 9px 87px;
+cursor: pointer;
+text-transform: uppercase;
+color: #fff;
+border-radius: 3px;
+background-color: #009fe3;
+ }
+ .loginInput
+ {
+ 	position:relative;
+	left:27%;
+font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	width: 209px;
+	height: 40px;
+	padding-left: 7px;
+	color: #6f6f6f;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
+ }
+ .passwordInput
+ {
+ 	position:relative;
+	left:27%;
+	top:-15px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	width: 209px;
+	height: 40px;
+	padding-left: 7px;
+	color: #6f6f6f;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
