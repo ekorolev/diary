@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Roboto:400,300,700|Oswald:400,300,700&subset=latin,cyrillic-ext);
 *
 {
 	margin:0;
@@ -15,6 +16,7 @@ li
 html,body
 {
 	height:100%;
+	font-family:"Open Sans"; 
 }
 ul
 {
@@ -27,7 +29,23 @@ ul
 	min-height:100%;
 	background-color:red;
 	position: relative;
+	background-image: url(../image/books/background4.jpg);
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
  }
+ .backFadeSideBar
+ {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20%;
+	height:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
  .sideBar
  {
 	position:absolute;
@@ -35,67 +53,275 @@ ul
 	left:0;
 	width:20%;
 	height:100%;
-	background-color:gold;
+	z-index:3;
  }
+  .backFadeMainCont
+ {
+	position:absolute;
+	top:8%;
+	left:20%;
+	width:80%;
+	height:92%;
+	z-index:2;
+	opacity: 0;
+	background-color: #fff;
+}
  .mainCont
  {
 	position:relative;
 	margin-left:20%;
-	background-color:black;
 	height:100%;
+	z-index:3;
+ }
+ .backFadeSearch
+ {
+ 	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:6%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
  }
  .search
  {
 	position:relative;
-	height:10%;
- 	background-color:red;
+	height:6%;
+ 	z-index:3;
+	
+ }
+ .searchDesign
+ {
+	margin-top:0.5%;
+	margin-left:60%;
+	width:250px;
+	height:25px;
+	text-align:right;
+ }
+ .searchImage
+ {
+	position:absolute;
+	top:4%;
+	right: 14%;
+	background: url(../image/lupa.png);
+	border:none;
+	height :30px;
+	width: 22px;
+	outline:none;
  }
  .listData
  {
 		position:relative;
 		margin-top:0px;
-		background-color:white;
-		height:90%;
+		height:92%;
  }
  .element
  {
  	position:relative;
-	background-color:blue;
+	height:25%;
+
  }
  .image
  {
 	float: left;
 	position:relative;
-	width:100px;
-	height:100px;
+	width:21%;
+	height:100%;
 	background-color:green;
  }
  .info
  {
 	position:relative;
 	display:inline-block;
+	height:100%;
+	width:70%;
  }
  .autor
  { 	
 	position:relative;
-	text-align:center;
-	background-color:orange;
+	text-align:left;
+	background-color:white;
+	height:25%;
+	padding-left:15px;
  }
  .ganre
  {
  	position:relative;
-	text-align:center;
+	text-align:left;
 	background-color:white;
+	height:25%;
+	padding-left:15px;
  }
  .year
  {
  	position:relative;
-	text-align:center;
-	background-color:orange;
+	text-align:left;
+	background-color:white;
+	height:25%;
+	padding-left:15px;
  }
  .discription
  {
  	position:relative;
-	text-align:center;
+	text-align:left;
 	background-color:white;
+	height:25%;
+	padding-left:15px;
+ }
+ .proFile
+ {
+	 	position:relative;
+		height: 30%;
+ }
+  .backProFileTitle
+ {
+		position:absolute;
+		top:0;
+		left:0;
+		height: 20%;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
+ .proFileTitle
+ {
+ top:3%;
+		position:relative;
+		height: 20%;
+		text-align:center;
+		font-family:"Oswald";
+		z-index:3;
+ }
+  .proFileCont
+ {
+		position:relative;
+		height: 80%;
+ }
+ .proBut
+ {
+	position:absolute;
+	bottom:8%;
+	left:37%;
+	padding: 3px 25px; 
+	cursor:pointer;
+	background-color:47B3E2;
+	font-family:"Oswald";
+	font-size:14pt;
+ }
+ .myData
+ {
+ 	 	position:relative;
+		height: 30%;
+ }
+   .backMyDataTitle
+ {
+		position:absolute;
+		top:0;
+		left:0;
+		height: 20%;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
+  .myDataTitle
+ {
+		position:relative;
+		top:3%;
+		height: 20%;
+		text-align:center;
+		z-index:3;
+		font-family:"Oswald";
+ }
+  .myDataCont
+ {
+		position:relative;
+		height: 80%;
+ }
+ .bookNews
+ {
+ 	 	position:relative;
+		height: 40%;
+ }
+ .backbookNewsTitle
+ {
+ 		position:absolute;
+		top:0;
+		left:0;
+		height: 20%;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+ }
+   .bookNewsTitle
+ {
+		position:relative;
+		top:5%;
+		height: 15%;
+		text-align:center;
+		z-index:3;
+		font-family:"Oswald";
+ }
+  .bookNewsCont
+ {
+		position:relative;
+		height: 85%;
+ }
+ .firstInfo
+ {
+		position:relative;
+		width:100%;
+		height:40%;
+ }
+ .moreImage
+ {
+	position:relative;
+	width:40%;
+	height:100%;
+ }
+ .moreAbout
+ {
+	position:absolute;
+	left:40%;
+	top:0;
+	width:60%;
+	height:100%;
+ }
+ .name1
+ {
+	position:relative;
+	height:25%;
+	background-color:white;
+	text-align:center;
+ }
+ .autor1
+ {
+	position:relative;
+	height:25%;
+	background-color:black;
+	text-align:center;
+ }
+ .year1
+ {
+ 	position:relative;
+	height:25%;
+	background-color:white;
+	text-align:center;
+ }
+ .ganre1
+ {
+ 	position:relative;
+	height:25%;
+	background-color:black;
+	text-align:center;
+ }
+ .moreDiscription
+ {
+ 		position:relative;
+		width:100%;
+		height:52%;
+		background-color:green;
  }
