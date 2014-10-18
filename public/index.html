@@ -80,9 +80,14 @@
 							</p>
 							<p class="discription">
 								{{#if isPlanBook(_id, user.planBooks )}}
-									Книга в планах к прочтению <u on-click='NoRead'>X</u>
+									В планах <u on-click='NoRead'>X</u>
 								{{else}}
 									<button on-click='wantToRead'>Хочу прочесть</button>
+								{{/if}}
+								{{#if isReadBook(_id, user.readBooks )}}
+									В прочтенных <u on-click='NoAlreadyRead'>X</u>
+								{{else}}
+									<button on-click='alreadyRead'>Читал</button>
 								{{/if}}
 							</p>
 						</div>
@@ -106,6 +111,7 @@
 					<div class="backMyDataTitle"></div>
 					<div class="myDataTitle">
 						My Books
+						<div class='iamreaded' on-click='iAmReaded'>Прочитанные книги</div>
 					</div>
 					<div class="myDataCont">
 						{{#planBooks}}

@@ -4,7 +4,7 @@ module.exports = function (opts) {
 	var Users = opts.models.users;
 
 	app.use( function (req, res, next) {
-		var token = req.body.token;
+		var token = req.body.token || req.query.token;
 		if (token) {
 			Users.findOne({
 				token: token

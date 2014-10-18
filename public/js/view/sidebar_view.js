@@ -44,17 +44,15 @@ var SidebarView = Backbone.View.extend({
 						window.BooksListViewR.set("user", data.user);
 						window.BooksListViewR.set('books', window.BooksListViewR.data.books);
 						window.SidebarViewR.set("planBooks", data.user.planBooks);
-						// var el = $(evt.target).closest('.toggleRead');
-						// var readYes = el.hasClass('readYes');
-						// if (readYes) {
-						// 	el.closest('.discription').html("<div class='toggleRead readNo'><button on-click='wantToRead'>Хочу прочесть</button></div>");
-						// } else {
-						// 	el.closest('.discription').html("<div class='toggleRead readYes'>Книга в планах к прочтению <u on-click='NoRead'>X</u></div>");
-						// }
+
 					}
 				}
 			})
 			console.log('Хочу прочесть книгу: ', id);
+		})
+
+		window.SidebarViewR.on('iAmReaded', function (event) {
+			window.BooksListViewR = new BooksListView('mybooks');
 		})
 	},
 	initialize: function (opts) {
