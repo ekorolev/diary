@@ -109,22 +109,35 @@ ul
  }
  .searchDesign
  {
-	margin-top:13px;
+	margin-top:9px;
 	margin-left:60%;
-	width:250px;
-	height:25px;
 	text-align:right;
+	 	position:relative;
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	width: 250px;
+	height: 30px;
+	color: #6f6f6f;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
  .searchImage
  {
 	position:absolute;
-	top:10px;
-	right: 14%;
-	background: url(../image/lupa.png);
+	top:9px;
+	right: 85px;
+	background: url(../image/books/search.png);
+	background-position: 27px 0px;
+	background-repeat:no-repeat;
 	border:none;
+	background-color: #14B08D;
+	cursor:pointer;
 	height :30px;
-	width: 22px;
+	width: 80px;
 	outline:none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
  .listData
  {
@@ -183,7 +196,7 @@ ul
  .proFile
  {
 	 	position:relative;
-		height: 30%;
+		height: 190px;
  }
   .backProFileTitle
  {
@@ -213,7 +226,7 @@ ul
  .proBut
  {
 	position:absolute;
-	bottom:15px;
+	bottom:20px;
 	left:100px;
 	padding: 3px 25px; 
 	cursor:pointer;
@@ -402,10 +415,11 @@ ul
  .logBut
   {
   position:absolute;
-  left:108px;
+  left:100px;
 font-family: 'Roboto', sans-serif;
 font-size: 14px;
 font-weight: 700;
+width: 220px;
 padding: 9px 87px;
 cursor: pointer;
 text-transform: uppercase;
@@ -416,13 +430,13 @@ background-color: #009fe3;
  .loginInput
  {
  	position:relative;
-	left:27%;
-font-family: 'Roboto', sans-serif;
+	left:100px;
+	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
-	width: 209px;
+	width: 220px;
 	height: 40px;
-	padding-left: 7px;
+	padding: 7px 7px 7px 7px;
 	color: #6f6f6f;
 	border-radius: 3px;
 	box-shadow: 2px 2px 4px black;
@@ -430,12 +444,12 @@ font-family: 'Roboto', sans-serif;
  .passwordInput
  {
  	position:relative;
-	left:27%;
+	left:100px;
 	top:-15px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: 700;
-	width: 209px;
+	width: 220px;
 	height: 40px;
 	padding-left: 7px;
 	color: #6f6f6f;
