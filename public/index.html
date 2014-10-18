@@ -3,26 +3,60 @@
 	<head>
 	</head>
 
-	<body>
+		
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js'></script>
+		<script src='///cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js'></script>
+		<script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
+		<script src='/js/router/router.js'></script>
+		<script src='/js/view/login.js'></script>
+		<script src='/js/view/dashboard.js'></script>
+		<script src='/js/view/bookslist_view.js'></script>
+		<script src='/js/view/book_view.js'></script>
+		<script src='/js/app.js'></script>
 
-		<form action='/books/create' method='post'>
-			<ul>
-				<li>
-					<input type='text' name='name' placeholder='Название книги'>
-				</li>
-				<li>
-					<input type='text' name='author' placeholder='Автор'>
-				</li>
-				<li>
-					<input type='text' name='photo_url' placeholder='Ссылка на изображение'>
-				</li>
-				<li>
-					<textarea name='description' placeholder='Описание книги'></textarea>
-				</li>
-				<li>
-					<input type='submit'>
-				</li>
-			</ul>
+		<script id='login' type='text/ractive'>
+			<div id="loginView">
+				Login
+			</div>
+		</script>
+
+		<script id='dashboard' type='text/ractive'>
+			<div id="dashboardView">
+				{{>sidebar}}
+				dashboard
+				<div id="innerContent"></div>
+			</div>
+		</script>
+
+		<script id="book" type="text/ractive">
+		  {{#books}}
+			  <div class="book">
+			  	{{name}}, {{_id}}
+			  </div>
+		  {{/books}}
+		</script>
+
+		<script id="sidebar" type="text/ractive">
+			<div id="sidebar">
+
+			</div>
+		</script>
+
+		<script id="book_view" type="text/ractive">
+			<div>
+				Книга: 
+				{{name}}
+			</div>
+		</script>
+
+		<script id="bookslist_view" type="text/ractive">
+			<div id="bookslist">
+				Книги: 
+				{{>books}}
+			</div>
+		</script>
+	<body>
 
 	</body>
 </html>
