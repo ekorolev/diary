@@ -12,6 +12,7 @@ var AppRouter = Backbone.Router.extend({
 	dashboard: function (id) {
 		console.log(id);
 		window.dashboard_view = new DashboardView();
+		window.sidebar_view = new SidebarView();
 		if (id) {
 			var book_view = new BookView(id);
 		} else {

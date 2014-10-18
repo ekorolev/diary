@@ -1,6 +1,6 @@
 
 var DashboardView = Backbone.View.extend({
-	el: "body",
+	el: ".mainCont .content",
 	template: "dashboard",
 	insert: function (id) {
 		var self = this;
