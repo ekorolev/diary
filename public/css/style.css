@@ -169,6 +169,7 @@ ul
  { 	
 	position:relative;
 	text-align:left;
+	font-weight: bold;
 	height:25%;
 	padding-left:15px;
  }
@@ -237,7 +238,7 @@ ul
  .myData
  {
  	 	position:relative;
-		height: 30%;
+		height: 200px;
  }
    .backMyDataTitle
  {
