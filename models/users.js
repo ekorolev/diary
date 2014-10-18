@@ -18,6 +18,12 @@ module.exports = function ( mongoose ) {
 
 		// token
 		token: String,
+
+		// books
+		readBooks: { type: Array, default: [] },
+		planBooks: { type: Array, default: [] },
+		planBooksObject: { type: String, default: "{}"},
+		readBooksObject: { type: String, default: "{}"},
 	});
 
 	s.methods.comparePassword = function (candidate, cb) {

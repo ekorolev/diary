@@ -3,9 +3,10 @@ module.exports = function ( opts ) {
 	var app = opts.app;
 	var Users = opts.models.users;
 
-	app.post('/singin', function (req, res) {
+	app.post('/signin', function (req, res) {
 		var login = req.body.login;
 		var password = req.body.password;
+		console.log(login, password);
 
 		Users.findOne({
 			login: login
@@ -23,8 +24,9 @@ module.exports = function ( opts ) {
 					});
 				} else {
 
-					user.comparePassword(password, function (isMatch) {
+					user.comparePassword(password, function (err, isMatch) {
 						if (!isMatch) {
+							console.log('Неверный пароль');
 							res.send({
 								error: "signin_error"
 							});
@@ -40,7 +42,8 @@ module.exports = function ( opts ) {
 								} else {
 
 									res.send({
-										token: user.token
+										token: user.token,
+										user: user
 									});
 								}
 							})
@@ -68,6 +71,6 @@ module.exports = function ( opts ) {
 
 function uniqueToken () {
 	var number = Math.ceil(Math.random()*1000);
-	var date = Date().getDate();
+	var date = new Date().getTime();
 	return "" + number + date + "";
 }

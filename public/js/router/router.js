@@ -10,12 +10,16 @@ var AppRouter = Backbone.Router.extend({
 
 	},
 	dashboard: function (id) {
-		console.log(id);
-		window.dashboard_view = new DashboardView();
-		window.sidebar_view = new SidebarView();
+		console.log('Показываем книгу: ', id);
+		var token = localStorage.getItem('token');
+		window.dashboard_view = new DashboardView({
+			id: id,
+			token: token
+		});
 		if (id) {
 			var book_view = new BookView(id);
 		} else {
+
 			var bookslist_view = new BooksListView();
 		}
 	},

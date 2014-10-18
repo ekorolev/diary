@@ -17,25 +17,54 @@
 		<script src='/js/app.js'></script>
 
 		<script id='login' type='text/ractive'>
-			<div id="loginView">
-				Login
+			<div id="wrapper1">
+				<div class="login">
+					<div class="loginTitle">
+						Login
+					</div>
+					<div class="loginForm">
+					<form on-submit='auth'>
+							<input type="text" class="loginInput" placeholder="login...    ">
+					</div>
+					<div class="passwordTitle">
+						Password
+					</div>
+					<div class="passwordForm">
+						<input type="text" class="passwordInput" placeholder="Password...    ">
+					</div>
+					<div class="other">
+							<input type='submit' on-click='auth'>
+							</form>
+					</div>
+				</div>
 			</div>
+			</form>
 		</script>
 
 		<script id='dashboard' type='text/ractive'>
-			{{>sidebar}}
-			dashboard
-			<div id="innerContent"></div>
+			<div id="wrapper">
+				<div class='sideBar'>
+
+				</div>
+				<div class="mainCont">
+					<div class="search">
+							<input  class="searchDesign" placeholder="Search by books..." on-keyup='search'>
+					</div>
+					<div class='listData'>
+
+					</div>
+				</div>
+			</div>
 		</script>
 
 		<script id="book" type="text/ractive">
 		  {{#books}}
 				<li>
-					<div class="element" id="{{_id}}" on-click="show">
+					<div class="element" book_id="{{_id}}">
 						<div class="image">
 						</div>
 						<div class="info">
-							<p class="autor">
+							<p class="autor" on-click="show">
 								{{name}}
 							</p>
 							<p class="ganre">
@@ -45,6 +74,11 @@
 								year
 							</p>
 							<p class="discription">
+								{{#if isPlanBook(_id, user.planBooks )}}
+									Книга в планах к прочтению <u on-click='NoRead'>X</u>
+								{{else}}
+									<button on-click='wantToRead'>Хочу прочесть</button>
+								{{/if}}
 							</p>
 						</div>
 					</div>
@@ -53,7 +87,35 @@
 		</script>
 
 		<script id="sidebar" type="text/ractive">
-			sidebar
+			{{#token}}
+				<div class="proFile">
+					<div class="proFileTitle">
+						ProFile
+					</div>
+					<div class="proFileCont" on-click='signout'>
+						<button type="button" class="proBut">Exit</button>
+					</div>
+				</div>
+				<div class="myData">
+					<div class="myDataTitle">
+						My Books
+					</div>
+					<div class="myDataCont">
+						{{#planBooks}}
+							<li>{{planBooksObject[this].name}} <u on-click="NoReadP" book_id="{{this}}">X</u></li>
+						{{/planBooks}}
+					</div>
+				</div>
+				<div class="bookNews">
+					<div class="bookNewsTitle">
+						Book News
+					</div>
+					<div class="bookNewsCont">
+					</div>
+				</div>
+			{{else}}
+				<a href='#login'>Войти</a>
+			{{/token}}
 		</script>
 
 		<script id="book_view" type="text/ractive">
@@ -67,23 +129,8 @@
 				Книги: 
 				<ul>{{>books}}</ul>
 		</script>
+
 	<body>
-		<div id="wrapper">
-			<div class='sideBar'>
 
-			</div>
-			<div class="mainCont">
-				<div class="search">
-					<form>
-						<input  class="searchDesign" placeholder="Search by books...">
-						
-						</input>
-					</form>
-				</div>
-				<div class='listData'>
-
-				</div>
-			</div>
-		</div>
 	</body>
 </html>

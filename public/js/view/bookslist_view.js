@@ -1,16 +1,18 @@
 
 var BooksListView = Backbone.View.extend({
-	el: "#innerContent",
+	el: "#wrapper .listData",
 	template: "bookslist_view",
+	data: null,
 	render: function (list) {
 		var self = this;
 
 		var books = $("#book").text();
 		var template = $("#bookslist_view").text();
+		window.user = localStorage.user;
 		window.BooksListViewR = new Ractive({
 			el: self.$el,
 			template: template,
-			data: list,
+			data: self.data,
 			partials: {
 				books: books
 			},
@@ -20,25 +22,100 @@ var BooksListView = Backbone.View.extend({
 		});
 
 		window.BooksListViewR.on("show", function (event) {
-			var id = $(event.node).attr('id');
+			var id = $(event.original.target).closest('.element').attr('book_id');
 			window.location.href = '#/dashboard/'+id
 		});
+
+		window.BooksListViewR.on("wantToRead", function (event) {
+			var evt = event.original;
+			var id = $(evt.target).closest('.element').attr('book_id');
+			$.ajax({
+				url: "/books/planBooks/push",
+				method: "post",
+				data: {
+					token: localStorage.token,
+					book_id: id,
+				},
+				success: function (data) {
+					if (data.success) {
+						localStorage.setItem("user", JSON.stringify(data.user));
+						console.log('Результат операции: ', data);
+						
+						window.BooksListViewR.set("user", data.user);
+						window.BooksListViewR.set('books', self.data.books);
+						window.SidebarViewR.set("planBooks", data.user.planBooks);
+						// var el = $(evt.target).closest('.toggleRead');
+						// var readYes = el.hasClass('readYes');
+						// if (readYes) {
+						// 	el.closest('.discription').html("<div class='toggleRead readNo'><button on-click='wantToRead'>Хочу прочесть</button></div>");
+						// } else {
+						// 	el.closest('.discription').html("<div class='toggleRead readYes'>Книга в планах к прочтению <u on-click='NoRead'>X</u></div>");
+						// }						
+
+					}
+				}
+			})
+			console.log('Хочу прочесть книгу: ', id);
+		});
+
+		window.BooksListViewR.on('NoRead', function (event) {
+			var evt = event.original;
+			var id = $(evt.target).closest('.element').attr('book_id');
+			$.ajax({
+				url: "/books/planBooks/delete",
+				method: "post",
+				data: {
+					token: localStorage.token,
+					book_id: id,
+				},
+				success: function (data) {
+					if (data.success) {
+						localStorage.setItem("user", JSON.stringify(data.user));
+						console.log('Результат операции: ', data);
+
+						window.BooksListViewR.set("user", data.user);
+						window.BooksListViewR.set('books', self.data.books);
+						window.SidebarViewR.set("planBooks", data.user.planBooks);
+						// var el = $(evt.target).closest('.toggleRead');
+						// var readYes = el.hasClass('readYes');
+						// if (readYes) {
+						// 	el.closest('.discription').html("<div class='toggleRead readNo'><button on-click='wantToRead'>Хочу прочесть</button></div>");
+						// } else {
+						// 	el.closest('.discription').html("<div class='toggleRead readYes'>Книга в планах к прочтению <u on-click='NoRead'>X</u></div>");
+						// }
+					}
+				}
+			})
+			console.log('Хочу прочесть книгу: ', id);
+		})
+
 	},
-	load: function (cb) {
+	load: function (query, cb) {
 
 		$.ajax({
-			url: "/books",
+			url: query? "/books/search?query="+query : "/books",
 			method: "get",
 			success: cb,
 		});
 
 	},
-	initialize: function () {
+	initialize: function (query) {
 		console.log('Рисуем лист с книгами');
 		var self = this;
 
-		self.load( function (list) {
+		self.load(query, function (list) {
 			console.log("Ответ с сервера: ", list);
+			self.data = {
+				books: list.books,
+				user: JSON.parse(localStorage.user),
+				isPlanBook: function (id, planBooks) {
+					if ( planBooks.indexOf(id)+1 ) {
+						return true;
+					} else {
+						return false;
+					}
+				}
+			};
 			self.render(list);
 		})
 	}
