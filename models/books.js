@@ -1,3 +1,4 @@
+var textSearch = require('mongoose-text-search');
 
 module.exports = function ( mongoose ) {
 	var schema = mongoose.Schema({
@@ -16,7 +17,13 @@ module.exports = function ( mongoose ) {
 		}
 	});
 
-	var model = mongoose('books', schema);
+	schema.plugin(textSearch);
+	schema.index({
+		name: "text",
+		author: "text"
+	})
+
+	var model = mongoose.model('books', schema);
 
 	return model;
 }
