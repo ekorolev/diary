@@ -128,7 +128,7 @@ module.exports = function (opts) {
 			var isPlanBook = user.planBooks.indexOf(id);
 			if ( isPlanBook+1 ) {
 
-				var book_id = user.planBooksObject[isPlanBook];
+				var book_id = user.planBooks[isPlanBook];
 				user.planBooks.splice( isPlanBook, 1);
 				var planBooksObject = JSON.parse(user.planBooksObject);
 				delete planBooksObject[book_id];

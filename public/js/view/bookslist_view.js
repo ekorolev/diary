@@ -43,6 +43,7 @@ var BooksListView = Backbone.View.extend({
 						
 						window.BooksListViewR.set("user", data.user);
 						window.BooksListViewR.set('books', self.data.books);
+						window.SidebarViewR.set("planBooksObject", JSON.parse(data.user.planBooksObject));
 						window.SidebarViewR.set("planBooks", data.user.planBooks);
 						// var el = $(evt.target).closest('.toggleRead');
 						// var readYes = el.hasClass('readYes');
@@ -70,11 +71,13 @@ var BooksListView = Backbone.View.extend({
 				},
 				success: function (data) {
 					if (data.success) {
-						localStorage.setItem("user", JSON.stringify(data.user));
+						localStorage.setItem("user", data.user);
 						console.log('Результат операции: ', data);
 
 						window.BooksListViewR.set("user", data.user);
 						window.BooksListViewR.set('books', self.data.books);
+						
+						window.SidebarViewR.set("planBooksObject", JSON.parse(data.user.planBooksObject));
 						window.SidebarViewR.set("planBooks", data.user.planBooks);
 						// var el = $(evt.target).closest('.toggleRead');
 						// var readYes = el.hasClass('readYes');

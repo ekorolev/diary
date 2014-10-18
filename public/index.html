@@ -17,38 +17,42 @@
 		<script src='/js/app.js'></script>
 
 		<script id='login' type='text/ractive'>
-			<div id="wrapper1">
+			<div id="wrapper2">
+				<div class="backLogin"></div>
 				<div class="login">
 					<div class="loginTitle">
 						Login
 					</div>
 					<div class="loginForm">
-					<form on-submit='auth'>
+					<form>
 							<input type="text" class="loginInput" placeholder="login...    ">
+							</input>
 					</div>
 					<div class="passwordTitle">
 						Password
 					</div>
 					<div class="passwordForm">
-						<input type="text" class="passwordInput" placeholder="Password...    ">
+							<input type="text" class="passwordInput" placeholder="Password...    ">
+							</input>
+					</form>
 					</div>
 					<div class="other">
-							<input type='submit' on-click='auth'>
-							</form>
+							<button type="button" class="logBut" on-click='auth'>Login</button>
 					</div>
 				</div>
 			</div>
-			</form>
 		</script>
 
 		<script id='dashboard' type='text/ractive'>
 			<div id="wrapper">
+				<div class="backFadeSideBar"></div>
 				<div class='sideBar'>
-
 				</div>
-				<div class="mainCont">
+					<div class="mainCont">
+					<div class="backFadeSearch"></div>
 					<div class="search">
-							<input  class="searchDesign" placeholder="Search by books..." on-keyup='search'>
+							<input type="text" class="searchDesign" placeholder="Search by books...    " on-keyup='search'>
+							<input type="image" class="searchImage">
 					</div>
 					<div class='listData'>
 
@@ -62,6 +66,7 @@
 				<li>
 					<div class="element" book_id="{{_id}}">
 						<div class="image">
+							<img src="{{photo_url}}" height="100%">
 						</div>
 						<div class="info">
 							<p class="autor" on-click="show">
@@ -89,6 +94,7 @@
 		<script id="sidebar" type="text/ractive">
 			{{#token}}
 				<div class="proFile">
+					<div class="backProFileTitle"></div>
 					<div class="proFileTitle">
 						ProFile
 					</div>
@@ -97,6 +103,7 @@
 					</div>
 				</div>
 				<div class="myData">
+					<div class="backMyDataTitle"></div>
 					<div class="myDataTitle">
 						My Books
 					</div>
@@ -107,6 +114,7 @@
 					</div>
 				</div>
 				<div class="bookNews">
+					<div class="backbookNewsTitle"></div>
 					<div class="bookNewsTitle">
 						Book News
 					</div>
@@ -120,13 +128,11 @@
 
 		<script id="book_view" type="text/ractive">
 			<div>
-				Книга: 
 				{{name}}
 			</div>
 		</script>
 
-		<script id="bookslist_view" type="text/ractive">
-				Книги: 
+		<script id="bookslist_view" type="text/ractive"> 
 				<ul>{{>books}}</ul>
 		</script>
 
