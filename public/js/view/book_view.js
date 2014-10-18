@@ -1,6 +1,6 @@
 
 var BookView = Backbone.View.extend({
-	el: "#innerContent",
+	el: "#wrapper .listData",
 	template: "book_view",
 	render: function (book) {
 		var self = this;

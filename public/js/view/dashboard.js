@@ -1,8 +1,9 @@
 
 var DashboardView = Backbone.View.extend({
-	el: ".mainCont .content",
+	el: "body",
 	template: "dashboard",
-	insert: function (id) {
+	insert: function (opts) {
+		var id = opts.id
 		var self = this;
 		
 		var template = $("#dashboard").text();
@@ -11,13 +12,24 @@ var DashboardView = Backbone.View.extend({
 			el: self.$el,
 			template: template,
 			complete: function () {
+				window.sidebar_view = new SidebarView();
+				console.log('Инициализация сайдбара');
 
 			}
 		});
+
+		window.DashboardViewR.on("search", function (event) {
+			var keyCode = event.original.keyCode;
+			if (keyCode==13) {
+				var query = $(".searchDesign").val();
+
+				window.BooksListViewR = new BooksListView(query);
+			}
+		})
 	},
-	initialize: function (id) {
+	initialize: function (opts) {
 		console.log('route:dashboard');
-		this.insert(id);
+		this.insert(opts);
 	}
 });
 

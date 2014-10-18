@@ -9,6 +9,10 @@ module.exports = function ( opts ) {
 
 
 	var books = require('./books');
+	var auth = require('./auth');
+	var middlewares = require('./middlewares');
+	middlewares(opts);
 	books(opts);
+	auth(opts);
 
 }

@@ -45,15 +45,17 @@ module.exports = function (opts) {
 	})
 
 	app.get('/books/search', function (req, res) {
-
+		var data = req.query;
 		
+		var regex = new RegExp(data.query);
+
 		var r = Books.find({
 			$or: [
 				{
-					name: req.query.query
+					name: regex
 				},
 				{
-					author: req.query.query
+					author: regex
 				}
 			]
 		});
@@ -68,5 +70,87 @@ module.exports = function (opts) {
 				})
 			}
 		})
+	});
+
+	app.post('/books/planBooks/push', function (req, res) {
+		var user = req.user;
+		var id = req.body.book_id;
+		if (!user) {
+			res.send({ error: "not_auth" });
+		} else {
+
+			Books.findById(id, function (err, book) {
+				if (err) {
+					res.send({ error: "db_error" });
+				} else {
+
+					if (!book) {
+						res.send({ error: "book_not_found" });
+					} else {
+
+						if ( user.planBooks.indexOf(book._id.toString() )+1 ) {
+							res.send({ error: "already_plan" });
+						} else {
+
+							user.planBooks.push(book._id.toString());
+							
+							var planBooksObject = JSON.parse( user.planBooksObject );
+							planBooksObject[book._id.toString()] = {
+								name: book.name,
+								author: book.author
+							};
+							var planBooksObject = JSON.stringify(planBooksObject);
+							user.planBooksObject = planBooksObject;
+
+							console.log(user);
+							user.save( function (err, user) {
+								if (err) res.send({ error: "db_error" }); else {
+									console.log(user);
+									res.send({
+										success: true,
+										user: user,
+									});
+								}
+							});
+						}
+					}
+				}
+			})
+		}
+	})
+
+	app.post('/books/planBooks/delete', function (req, res) {
+		var user = req.user;
+		var id = req.body.book_id;
+		if (!user) {
+			res.send({ error: "not_auth" });
+		} else {
+			var isPlanBook = user.planBooks.indexOf(id);
+			if ( isPlanBook+1 ) {
+
+				var book_id = user.planBooksObject[isPlanBook];
+				user.planBooks.splice( isPlanBook, 1);
+				var planBooksObject = JSON.parse(user.planBooksObject);
+				delete planBooksObject[book_id];
+				planBooksObject = JSON.stringify(planBooksObject);
+				user.planBooksObject = planBooksObject;
+				user.save(function (err, user) {
+					if (err) {
+						res.send({error: "db_error"});
+					} else {
+
+						res.send({
+							user: user,
+							success: true,
+						})
+					}
+				})
+
+			} else {
+				res.send({
+					error: "no_plan_book"
+				});
+			}
+		}
 	})
 }
