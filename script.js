@@ -13,7 +13,7 @@
 				name: "Name"+i,
 				author: "Author"+i,
 				description: description,
-				photo_url: "/image/books/default.jpg",
+				photo_url: "/image/books/test_page.jpg",
 			});
 			nBook.save(function (err, b){
 				console.log('Книга создана', b);
