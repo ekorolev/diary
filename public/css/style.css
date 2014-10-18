@@ -299,20 +299,34 @@ ul
  {
 		position:relative;
 		width:100%;
-		height:40%;
+		height:250px;
  }
  .moreImage
  {
 	position:relative;
-	margin-left:15%;
-	width:40%;
+	top:30px;
+	margin-left:15px;
+	width:20%;
 	height:100%;
+ }
+ .myComm
+ {
+	position:absolute;
+	top:30px;
+	right:100px;
+	padding-left:10px;
+	padding-top:10px;
+	padding-right:10px;
+	width:30%;
+	height:240px;
+	overflow-y:auto;
+	
  }
  .moreAbout
  {
 	position:absolute;
-	left:40%;
-	top:0;
+	left:200px;
+	top:30px;
 	width:60%;
 	height:100%;
  }
@@ -355,9 +369,16 @@ ul
  .moreDiscription
  {
  		position:relative;
-		width:100%;
-		height:52%;
-		font-size: 20pt;
+		height:220px;
+		font-size: 15pt;
+		text-align:justify;
+		top:30px;
+		list-style-type:none;
+		background-color:white;
+		margin: 15px;
+		padding: 10px;
+		border-radius: 5px 5px 0px 0px;
+		border-top:6px solid #2980B5;
  }
  .backLogin
  {
