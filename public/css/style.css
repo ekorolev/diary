@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,300|Roboto:400,300,700|Oswald:400,300,700&subset=latin,cyrillic-ext);
 *
 {
 	margin:0;
@@ -15,10 +16,15 @@ li
 html,body
 {
 	height:100%;
+	font-family:"Open Sans"; 
 }
 ul
 {
 	list-style-type:none;
+	background-color:white;
+	margin: 15px;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
 }
 
 #wrapper
@@ -27,7 +33,35 @@ ul
 	min-height:100%;
 	background-color:red;
 	position: relative;
+	background: url(../image/books/background4.jpg) fixed;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
  }
+ #wrapper2
+{
+	width : 100%;
+	min-height:100%;
+	background-color:red;
+	position: relative;
+	background: url(../image/books/background4.jpg) fixed;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+ }
+ .backFadeSideBar
+ {
+	position:absolute;
+	top:0;
+	left:0;
+	width:20%;
+	height:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
  .sideBar
  {
 	position:absolute;
@@ -35,47 +69,79 @@ ul
 	left:0;
 	width:20%;
 	height:100%;
-	background-color:gold;
+	z-index:3;
  }
+  .backFadeMainCont
+ {
+	position:absolute;
+	top:8%;
+	left:20%;
+	width:80%;
+	height:92%;
+	z-index:2;
+	opacity: 0;
+	background-color: #fff;
+}
  .mainCont
  {
 	position:relative;
 	margin-left:20%;
-	background-color:black;
-	height:100%;
+	margin-bottom:0px;
+	z-index:3;
+ }
+ .backFadeSearch
+ {
+ 	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:50px;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
  }
  .search
  {
 	position:relative;
-	height:8%;
- 	background-color:red;
+	height:50px;
+ 	z-index:3;
+	
  }
  .searchDesign
  {
-	margin-top:1%;
-	margin-left:70%;
+	margin-top:13px;
+	margin-left:60%;
 	width:250px;
 	height:25px;
 	text-align:right;
+ }
+ .searchImage
+ {
+	position:absolute;
+	top:10px;
+	right: 14%;
+	background: url(../image/lupa.png);
+	border:none;
+	height :30px;
+	width: 22px;
+	outline:none;
  }
  .listData
  {
 		position:relative;
 		margin-top:0px;
-		background-color:white;
-		height:92%;
  }
  .element
  {
  	position:relative;
-	background-color:blue;
-	height:25%;
+	height:150px;
+
  }
  .image
  {
 	float: left;
 	position:relative;
-	width:30%;
+	width:21%;
 	height:100%;
 	background-color:green;
  }
@@ -89,102 +155,290 @@ ul
  .autor
  { 	
 	position:relative;
-	text-align:center;
-	background-color:orange;
+	text-align:left;
 	height:25%;
+	padding-left:15px;
  }
  .ganre
  {
  	position:relative;
-	text-align:center;
-	background-color:white;
+	text-align:left;
 	height:25%;
+	padding-left:15px;
  }
  .year
  {
  	position:relative;
-	text-align:center;
-	background-color:orange;
+	text-align:left;
 	height:25%;
+	padding-left:15px;
  }
  .discription
  {
  	position:relative;
-	text-align:center;
-	background-color:white;
+	text-align:left;
 	height:25%;
+	padding-left:15px;
  }
-
- html,body
-{
-	height:100%;
-}
-#wrapper1
-{
-	width : 100%;
-	min-height:100%;
-	position: relative;
+ .proFile
+ {
+	 	position:relative;
+		height: 30%;
  }
- .login
+  .backProFileTitle
+ {
+		position:absolute;
+		top:0;
+		left:0;
+		height: 50px;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
+ .proFileTitle
+ {
+ top:10px;
+		position:relative;
+		height: 50px;
+		text-align:center;
+		font-family:"Oswald";
+		z-index:3;
+ }
+  .proFileCont
+ {
+		position:relative;
+		height: 80%;
+ }
+ .proBut
  {
 	position:absolute;
-	top:30%;
+	bottom:15px;
+	left:100px;
+	padding: 3px 25px; 
+	cursor:pointer;
+	background-color:47B3E2;
+	font-family:"Oswald";
+	font-size:14pt;
+ }
+ .myData
+ {
+ 	 	position:relative;
+		height: 30%;
+ }
+   .backMyDataTitle
+ {
+		position:absolute;
+		top:0;
+		left:0;
+		height: 50px;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	 }
+  .myDataTitle
+ {
+		position:relative;
+		top:10px;
+		height: 50px;
+		text-align:center;
+		z-index:3;
+		font-family:"Oswald";
+ }
+  .myDataCont
+ {
+		position:relative;
+		height: 80%;
+ }
+ .bookNews
+ {
+ 	 	position:relative;
+		height: 40%;
+ }
+ .backbookNewsTitle
+ {
+ 		position:absolute;
+		top:0;
+		left:0;
+		height: 50px;
+		width:100%;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+ }
+   .bookNewsTitle
+ {
+		position:relative;
+		top:10px;
+		height: 50px;
+		text-align:center;
+		z-index:3;
+		font-family:"Oswald";
+ }
+  .bookNewsCont
+ {
+		position:relative;
+		height: 85%;
+ }
+ .firstInfo
+ {
+		position:relative;
+		width:100%;
+		height:40%;
+ }
+ .moreImage
+ {
+	position:relative;
+	margin-left:15%;
+	width:40%;
+	height:100%;
+ }
+ .moreAbout
+ {
+	position:absolute;
+	left:40%;
+	top:0;
+	width:60%;
+	height:100%;
+ }
+ .name1
+ {
+	position:relative;
+	height:25%;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
+ }
+ .autor1
+ {
+	position:relative;
+	height:25%;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
+ }
+ .year1
+ {
+	position:relative;
+	height:25%;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
+ }
+ .ganre1
+ {
+	position:relative;
+	height:25%;
+	color:white;
+	text-align:left;
+	padding-left:15px;
+	font-size: 20pt;
+ }
+ .moreDiscription
+ {
+ 		position:relative;
+		width:100%;
+		height:52%;
+		font-size: 20pt;
+ }
+ .backLogin
+ {
+	position:absolute;
+	top:250px;
 	left:34%;
 	width:30%;
-	height:30%;
-	background-color:green;
-	border: 2px double black;
+	height:250px;
+	z-index:2;
+	opacity: 0.4;
+	background-color: #fff;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
+ }
+  .login
+ {
+	position:absolute;
+	top:250px;
+	left:34%;
+	width:30%;
+	height:250px;
+	z-index:3;
+	border-radius: 5px 5px 0px 0px;
+	border-top:6px solid #2980B5;
  }
  .loginTitle
  {
 	position:relative;
-	height:20%;
-	background-color:red;
+	height:50px;
+	top:10px;
 	text-align:center;
 
  }
  .loginForm
  {
   	position:relative;
-	height:20%;
-	background-color:yellow;
+	height:50px;
+	bottom:5px;
  }
  .passwordTitle
  {
  	position:relative;
-	height:20%;
-	background-color:red;
+	height:50px;
 	text-align:center;
  }
  .passwordForm
  {
    	position:relative;
-	height:20%;
-	background-color:yellow;
+	height:50px;
  }
  .other
  {
    	position:relative;
-	height:20%;
-	background-color:white;
+	height:50px;
  }
  .logBut
   {
-	position:absolute;
-	bottom:25%;
-	left:20%;
-	height:50%;
-	width: 60%;
-	background-color:purple;
+  position:absolute;
+  left:108px;
+font-family: 'Roboto', sans-serif;
+font-size: 14px;
+font-weight: 700;
+padding: 9px 87px;
+cursor: pointer;
+text-transform: uppercase;
+color: #fff;
+border-radius: 3px;
+background-color: #009fe3;
  }
  .loginInput
  {
  	position:relative;
 	left:27%;
+font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	width: 209px;
+	height: 40px;
+	padding-left: 7px;
+	color: #6f6f6f;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
  .passwordInput
  {
-	position:relative;
+ 	position:relative;
 	left:27%;
+	top:-15px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	width: 209px;
+	height: 40px;
+	padding-left: 7px;
+	color: #6f6f6f;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
- 

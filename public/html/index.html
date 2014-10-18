@@ -1,203 +1,16 @@
 <html>
 	<head>
 		<title>
-			Читательский дневник
+			Diary
 		</title>
-			<link rel="stylesheet" type="text/css" href="css/main1.css">
-		<style>
-*
-{
-	margin:0;
-	padding:0;
-	border:0;
-}
-li
-{
-	position:relative;
-	display:inline-block;
-	width:45%;
-	margin-left:20px;
-	margin-top:20px;
-}
-html,body
-{
-	height:100%;
-}
-ul
-{
-	list-style-type:none;
-}
-
-#wrapper
-{
-	width : 100%;
-	min-height:100%;
-	background-color:red;
-	position: relative;
- }
- .sideBar
- {
-	position:absolute;
-	top:0;
-	left:0;
-	width:20%;
-	height:100%;
-	background-color:gold;
- }
- .mainCont
- {
-	position:relative;
-	margin-left:20%;
-	background-color:black;
-	height:100%;
- }
- .search
- {
-	position:relative;
-	height:8%;
- 	background-color:red;
- }
- .searchDesign
- {
-	margin-top:1%;
-	margin-left:70%;
-	width:250px;
-	height:25px;
-	text-align:right;
- }
- .searchImage
- {
-	
- }
- .listData
- {
-		position:relative;
-		margin-top:0px;
-		background-color:white;
-		height:92%;
- }
- .element
- {
- 	position:relative;
-	background-color:blue;
-	height:25%;
- }
- .image
- {
-	float: left;
-	position:relative;
-	width:30%;
-	height:100%;
-	background-color:green;
- }
- .info
- {
-	position:relative;
-	display:inline-block;
-	height:100%;
-	width:70%;
- }
- .autor
- { 	
-	position:relative;
-	text-align:center;
-	background-color:orange;
-	height:25%;
- }
- .ganre
- {
- 	position:relative;
-	text-align:center;
-	background-color:white;
-	height:25%;
- }
- .year
- {
- 	position:relative;
-	text-align:center;
-	background-color:orange;
-	height:25%;
- }
- .discription
- {
- 	position:relative;
-	text-align:center;
-	background-color:white;
-	height:25%;
- }
- .proFile
- {
-	 	position:relative;
-		height: 30%;
-		background-color:silver;
- }
- .proFileTitle
- {
-		position:relative;
-		height: 20%;
-		background-color:green;
-		text-align:center;
- }
-  .proFileCont
- {
-		position:relative;
-		height: 80%;
-		background-color:blue;
- }
- .proBut
- {
-	position:absolute;
-	bottom:10%;
-	left:35%;
-	height:10%;
-	width: 30%;
-	background-color:red;
- }
- .myData
- {
- 	 	position:relative;
-		height: 30%;
-		background-color:purple;
- }
-  .myDataTitle
- {
-		position:relative;
-		height: 20%;
-		background-color:green;
-		text-align:center;
- }
-  .myDataCont
- {
-		position:relative;
-		height: 80%;
-		background-color:silver;
- }
- .bookNews
- {
- 	 	position:relative;
-		height: 40%;
-		background-color:red;
- }
-   .bookNewsTitle
- {
-		position:relative;
-		height: 15%;
-		background-color:green;
-		text-align:center;
- }
-  .bookNewsCont
- {
-		position:relative;
-		height: 85%;
-		background-color:silver;
- }
-
-		</style>
+			<link rel="stylesheet" type="text/css" href="../css/style.css">
 	</head>
 	<body>
 		<div id="wrapper">
+			<div class="backFadeSideBar"></div>
 			<div class="sideBar">
 				<div class="proFile">
+					<div class="backProFileTitle"></div>
 					<div class="proFileTitle">
 						ProFile
 					</div>
@@ -206,6 +19,7 @@ ul
 					</div>
 				</div>
 				<div class="myData">
+					<div class="backMyDataTitle"></div>
 					<div class="myDataTitle">
 						My Books
 					</div>
@@ -213,6 +27,7 @@ ul
 					</div>
 				</div>
 				<div class="bookNews">
+					<div class="backbookNewsTitle"></div>
 					<div class="bookNewsTitle">
 						Book News
 					</div>
@@ -220,13 +35,13 @@ ul
 					</div>
 				</div>
 			</div>
+			<div class="backFadeMainCont"></div>
 			<div class="mainCont">
+				<div class="backFadeSearch"></div>
 				<div class="search">
 					<form>
 						<input type="text" class="searchDesign" placeholder="Search by books...    ">
-						</input>
 						<input type="image" class="searchImage">
-						</input>
 					</form>
 				</div>
 				<div class="listData">
@@ -234,19 +49,20 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
@@ -254,19 +70,20 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
@@ -274,19 +91,20 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
@@ -294,19 +112,20 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
@@ -314,19 +133,20 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
@@ -334,24 +154,108 @@ ul
 						<li>
 							<div class="element">
 								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
 								</div>
 								<div class="info">
 									<p class="autor">
-										autor
+										Name
 									</p>
 									<p class="ganre">
-										ganre
+										Autor
 									</p>
 									<p class="year">
-										year
+										Year
 									</p>
 									<p class="discription">
-										discriptiondsdsdssd
+										Ganre
 									</p>
 								</div>
 							</div>
 						</li>
-
+						<li>
+							<div class="element">
+								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
+								</div>
+								<div class="info">
+									<p class="autor">
+										Name
+									</p>
+									<p class="ganre">
+										Autor
+									</p>
+									<p class="year">
+										Year
+									</p>
+									<p class="discription">
+										Ganre
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="element">
+								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
+								</div>
+								<div class="info">
+									<p class="autor">
+										Name
+									</p>
+									<p class="ganre">
+										Autor
+									</p>
+									<p class="year">
+										Year
+									</p>
+									<p class="discription">
+										Ganre
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="element">
+								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
+								</div>
+								<div class="info">
+									<p class="autor">
+										Name
+									</p>
+									<p class="ganre">
+										Autor
+									</p>
+									<p class="year">
+										Year
+									</p>
+									<p class="discription">
+										Ganre
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="element">
+								<div class="image">
+									<img src="../image/books/test_page.jpg" height="100%">
+								</div>
+								<div class="info">
+									<p class="autor">
+										Name
+									</p>
+									<p class="ganre">
+										Autor
+									</p>
+									<p class="year">
+										Year
+									</p>
+									<p class="discription">
+										Ganre
+									</p>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>
