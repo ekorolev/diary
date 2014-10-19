@@ -87,6 +87,7 @@ position: absolute;
 bottom: 10px;
 top: 260px;
 left: 66px;
+color:white;
 }
  .backFadeSideBar
  {
@@ -466,17 +467,21 @@ left: 66px;
 	font-size: 20pt;
  }
 .saveButton {
-background-color:3E3435;
+background-color: #3E3435;
 position: absolute;
-top: 225px;
-left: 540px;
+top: 234px;
+left: 533px;
 height: 50px;
 width: 90px;
 border-radius: 3px;
 box-shadow: 2px 2px 4px black;
 font-family: "Open Sans", sans-serif;
 font-size: 14px;
-cursor:pointer;
+cursor: pointer;
+color: white;
+}
+.proFileCont p
+{
 color:white;
 }
 .planBook {
