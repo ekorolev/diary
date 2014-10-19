@@ -30,6 +30,54 @@ module.exports = function (opts) {
 		})
 	});
 
+	app.post('/book/:id/add_note', function (req, res) {
+		var id = req.params.id;
+		var note = req.body.note;
+		var user = req.user;
+		if (!user) {
+			res.send({
+				error: "not_auth"
+			});
+		} else {
+
+			Books.findById( id, function (err, book) {
+				if (err) {
+					res.send({
+						error: "not_auth"
+					});
+				} else {
+
+					if (!book) {
+						res.send({
+							error: "book_not_found"
+						});
+					} else {
+
+						var notesObj = JSON.parse( user.notes || "{}" );
+						notesObj[ book._id.toString() ] = note;
+						notesObj = JSON.stringify( notesObj );
+						user.notes = notesObj;
+						user.save( function (err, user) {
+							if (err) {
+
+								res.send({
+									error: "db_error",
+								});
+
+							} else {
+
+								res.send({
+									success: true,
+									user: user
+								});
+							}
+						})
+					}
+				}
+			})
+		}
+	})
+
 	app.get('/books', function (req, res) {
 
 		var r = Books.find({});

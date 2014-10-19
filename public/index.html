@@ -133,9 +133,38 @@
 		</script>
 
 		<script id="book_view" type="text/ractive">
-			<div>
-				{{name}}
-			</div>
+				<div class="moreInfoData" book_id="{{book._id}}">
+					<div class="firstInfo">
+						<div class="moreImage">
+							<img src="../image/books/test_page.jpg" height="100%">
+						</div>
+						<div class="moreAbout">
+							<p class="name1">
+								{{book.name}}
+							</p>
+							<p class="autor1">
+								{{book.author}}
+							</p>
+							<p class="year1">
+								1926
+							</p>
+							<p class="ganre1">
+								Сатира, фантастика
+							</p>
+						</div>
+						<div class="myComm" on-click='clickNote' {{#if !isNote(book._id, user) }} default='true' {{/if}}>
+							{{#if isNote(book._id, user) }}
+								{{ isNote(book._id, user ) }}
+							{{else}}
+								Здесь вы можете оставить свои заметки
+							{{/if}}
+						</div>
+					</div>
+					<button on-click="saveNote">Сохранить</button>
+					<div class="moreDiscription">
+						{{book.description}}
+					</div>
+				</div>
 		</script>
 
 		<script id="bookslist_view" type="text/ractive"> 

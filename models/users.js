@@ -24,6 +24,8 @@ module.exports = function ( mongoose ) {
 		planBooks: { type: Array, default: [] },
 		planBooksObject: { type: String, default: "{}"},
 		readBooksObject: { type: String, default: "{}"},
+
+		notes: { type: String, default: "{}" },
 	});
 
 	s.methods.comparePassword = function (candidate, cb) {
