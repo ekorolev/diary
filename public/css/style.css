@@ -52,14 +52,13 @@ ul
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
  }
- .myLogo
- {
-	position:absolute;
-	top:0px;
-	background-color: #3E3435;
-	padding-left:460px;
-	width:100%;
- }
+.myLogo {
+position: absolute;
+top: 0px;
+background-color: #3E3435;
+padding-left: 460px;
+padding-right: 490px;
+}
  .mainLogo
  {
 	height:35px;
@@ -81,14 +80,14 @@ border-top: 6px solid #3E3435;
  {
 	width:100px;
  }
- .iamreaded
- {
-	text-decoration: underline;
-	position:absolute;
-	bottom:10px;
-	top:160px;
-	left:66px;
- }
+.iamreaded {
+text-decoration: underline;
+position: absolute;
+bottom: 10px;
+top: 260px;
+left: 66px;
+color:white;
+}
  .backFadeSideBar
  {
 	position:absolute;
@@ -267,17 +266,25 @@ border-top: 6px solid #3E3435;
 	color:white;
 	font-family:"Oswald";
  }
-  .butRed
- {
-	background-color:Red;
-	position:relative;
-	text-align:center;
-	font-weight:bold;
-	width:100px;
-	cursor:pointer;
-	color:white;
-	font-family:"Oswald";
- }
+.butRed {
+background-color: #3E3435;
+position: relative;
+text-align: center;
+font-weight: bold;
+width: 100px;
+cursor: pointer;
+color: white;
+font-family: "Oswald";
+}
+.closeRed
+{
+background-image:url(../image/books/clo.png);
+background-repeat:no-repeat;
+position: relative;
+height:25px;
+width:25px;
+cursor: pointer;
+}
  .butYellow
  {
 	 background-color: #3E3435;
@@ -341,7 +348,7 @@ border-top: 6px solid #3E3435;
  .myData
  {
  	 	position:relative;
-		height: 200px;
+		height: 310px;
  }
    .backMyDataTitle
  {
@@ -467,27 +474,32 @@ border-top: 6px solid #3E3435;
 	font-size: 20pt;
  }
 .saveButton {
-background-color:3E3435;
+background-color: #3E3435;
 position: absolute;
-top: 225px;
-left: 540px;
+top: 234px;
+left: 533px;
 height: 50px;
 width: 90px;
 border-radius: 3px;
 box-shadow: 2px 2px 4px black;
 font-family: "Open Sans", sans-serif;
 font-size: 14px;
-cursor:pointer;
+cursor: pointer;
+color: white;
+}
+.proFileCont p
+{
 color:white;
 }
-li.planBook {
-position: relative;
-font-size: 12pt;
-top: -16px;
-height: 5px;
-background-color:#3E3435;
-text-decoration:underline;
-color:white;
+.planBook {
+width: auto;
+margin-left: 0;
+margin-top: 0;
+background-color: #3E3435;
+color: white;
+border-bottom: 1px solid white;
+padding: 10px;
+display: block;
 }
  .moreDiscription
  {
@@ -505,8 +517,7 @@ color:white;
  {
 	position:absolute;
 	top:250px;
-	left:34%;
-	width:30%;
+	width:25%;
 	height:250px;
 	z-index:2;
 	opacity: 0.4;
@@ -518,8 +529,7 @@ color:white;
  {
 	position:absolute;
 	top:250px;
-	left:34%;
-	width:30%;
+	width:45%;
 	height:250px;
 	z-index:3;
 	border-radius: 5px 5px 0px 0px;
