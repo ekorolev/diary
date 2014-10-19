@@ -559,7 +559,7 @@ display: block;
  color:white;
  	position:relative;
 	height:50px;
-	left:-125px;
+	left:-90px;
 	text-align:center;
  }
  .passwordForm
@@ -621,7 +621,7 @@ color: white;
  .passwordInput
  {
  	position:relative;
-	left:-1px;
+	left:98px;
 	top:-15px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
