@@ -61,6 +61,7 @@ var SidebarView = Backbone.View.extend({
 			var el = $(event.original.target);
 			var id = el.attr('book_id');
 			console.log('id книги: ', id);
+			window.location.href = '#/dashboard/'+id;
 			window.BooksViewR = new BookView(id);
 		})
 	},
