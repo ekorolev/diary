@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+	</head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type='text/javascript'>
+			$(function () {
+
+				var code = window.location.search.split('=')[1];
+				$.ajax({
+					url: "/vk/return",
+					method: "post",
+					data: {
+						code: code
+					},
+					success: function (data) {
+						console.log(data);
+						if (data.token) {
+							localStorage.setItem("user", JSON.stringify(data.user));
+							localStorage.setItem("token", data.token);
+							window.location.href = '/';
+						}
+					}
+				})
+			})
+		</script>
+
+	<body>
+
+	</body>
+</html>

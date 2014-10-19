@@ -38,6 +38,20 @@ var LoginView = Backbone.View.extend({
 					location.href='#dashboard'
 				}
 			})
+		}),
+
+		window.LoginViewR.on("vkauth", function (event) {
+			console.log('vkauth');
+			$.ajax({
+				url: "/auth/vk",
+				method:"get",
+				success: function (data) {
+					console.log(data);
+					if (data.redirect) {
+						window.location.href=data.redirect;
+					}
+				}
+			});
 		})
 	},
 	initialize: function () {

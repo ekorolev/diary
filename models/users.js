@@ -16,6 +16,17 @@ module.exports = function ( mongoose ) {
 		usePassword: Boolean,
 		cryptPassword: Boolean,
 
+		// social auth
+		social_auth: { type: Array, deafult: [] },
+
+		// vk options
+		first_name: String,
+		last_name: String,
+		screen_name: String,
+		photo_url: String,
+
+		printName: String,
+
 		// token
 		token: String,
 
@@ -52,6 +63,12 @@ module.exports = function ( mongoose ) {
 		} else {
 			next();
 		}
+	})
+
+	s.pre('save', function (next) {
+		var self = this;
+		self.printName = self.login || self.screen_name || self.first_name;
+		next();
 	})
 
 	return m;

@@ -71,7 +71,7 @@ var BooksListView = Backbone.View.extend({
 				},
 				success: function (data) {
 					if (data.success) {
-						localStorage.setItem("user", data.user);
+						localStorage.setItem("user", JSON.stringify(data.user));
 						console.log('Результат операции: ', data);
 
 						window.BooksListViewR.set("user", data.user);
