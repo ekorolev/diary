@@ -25,7 +25,7 @@ ul
 	background-color:white;
 	margin: 15px;
 	border-radius: 5px 5px 0px 0px;
-	border-top:6px solid #2980B5;
+	border-top:6px solid #3E3435;
 }
 
 #wrapper
@@ -34,7 +34,7 @@ ul
 	min-height:100%;
 	background-color:red;
 	position: relative;
-	background: url(../image/books/background4.jpg) fixed;
+	background: url(../image/books/background14.jpg) fixed;
 	-moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -46,7 +46,7 @@ ul
 	min-height:100%;
 	background-color:red;
 	position: relative;
-	background: url(../image/books/background4.jpg) fixed;
+	background: url(../image/books/background14.jpg) fixed;
 	-moz-background-size: 100%; /* Firefox 3.6+ */
     -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
     -o-background-size: 100%; /* Opera 9.6+ */
@@ -257,6 +257,7 @@ ul
 	font-weight:bold;
 	width:100px;
 	cursor:pointer;
+	color:white;
 	font-family:"Oswald";
  }
   .butRed
@@ -267,13 +268,15 @@ ul
 	font-weight:bold;
 	width:100px;
 	cursor:pointer;
+	color:white;
 	font-family:"Oswald";
  }
  .butYellow
  {
-	 background-color: #47B3E2;
+	 background-color: #3E3435;
 	position:absolute;
 	top:0px;
+	color:white;
 
 	font-weight:bold;
 	left: 150px;
@@ -319,7 +322,8 @@ ul
 	left:100px;
 	padding: 3px 25px; 
 	cursor:pointer;
-	background-color:#47B3E2;
+	color:white;
+	background-color:#3E3435;
 	font-family:"Oswald";
 	font-size:14pt;
  }
@@ -471,6 +475,7 @@ box-shadow: 2px 2px 4px black;
 font-family: "Open Sans", sans-serif;
 font-size: 14px;
 cursor:pointer;
+color:white;
 }
 li.planBook {
 position: relative;
@@ -490,7 +495,7 @@ height: 5px;
 		margin: 15px;
 		padding: 10px;
 		border-radius: 5px 5px 0px 0px;
-		border-top:6px solid #2980B5;
+		border-top:6px solid #3E3435;
  }
  .backLogin
  {
@@ -501,9 +506,9 @@ height: 5px;
 	height:250px;
 	z-index:2;
 	opacity: 0.4;
-	background-color: #fff;
+	background-color: white;
 	border-radius: 5px 5px 0px 0px;
-	border-top:6px solid #2980B5;
+	border-top:6px solid #3E3435;
  }
   .login
  {
@@ -514,12 +519,13 @@ height: 5px;
 	height:250px;
 	z-index:3;
 	border-radius: 5px 5px 0px 0px;
-	border-top:6px solid #2980B5;
+	border-top:6px solid #3E3435;
  }
  .loginTitle
  {
 	position:relative;
 	height:50px;
+	color:white;
 	top:10px;
 	text-align:center;
 
@@ -532,6 +538,7 @@ height: 5px;
  }
  .passwordTitle
  {
+ color:white;
  	position:relative;
 	height:50px;
 	text-align:center;
@@ -560,7 +567,8 @@ cursor: pointer;
 text-transform: uppercase;
 color: #fff;
 border-radius: 3px;
-background-color: #009fe3;
+background-color: #3E3435;
+color:white;
  }
  .loginInput
  {
