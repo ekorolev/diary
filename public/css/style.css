@@ -73,7 +73,7 @@ padding-right: 507px;
  }
  .moreDetails
  {
-list-style-type: none;
+list+-style-type: none;
 background-color: white;
 margin: 15px;
 border-radius: 5px 5px 0px 0px;
@@ -434,6 +434,8 @@ cursor: pointer;
 	height:240px;
 	overflow-y:auto;
 	font-family:"Roboto";
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
  }
  .moreAbout
  {
@@ -562,14 +564,14 @@ display: block;
  color:white;
  	position:relative;
 	height:50px;
-	left:-125px;
+	left:-90px;
 	text-align:center;
  }
  .passwordForm
  {
    	position:relative;
 	height:50px;
-	left:-30px;
+	left:98px;
  }
  .other
  {
@@ -587,14 +589,15 @@ z-index: 10;
 }
 .altLogIn {
 position: absolute;
-top: 70px;
+top: 65px;
 left: 418px;
 z-index: 10;
+cursor:pointer;
 }
  .logBut {
 position: absolute;
 left: 66px;
-top: 0px;
+top: 90px;
 font-family: 'Roboto', sans-serif;
 font-size: 14px;
 font-weight: 700;
@@ -624,7 +627,7 @@ color: white;
  .passwordInput
  {
  	position:relative;
-	left:100px;
+	left:-2px;
 	top:-15px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
