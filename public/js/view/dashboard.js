@@ -20,7 +20,8 @@ var DashboardView = Backbone.View.extend({
 
 		window.DashboardViewR.on("search", function (event) {
 			var keyCode = event.original.keyCode;
-			if (keyCode==13) {
+			var isEl = $(event.original.target).hasClass('searchImage');
+			if (keyCode==13 || isEl) {
 				var query = $(".searchDesign").val();
 
 				window.BooksListViewR = new BooksListView(query);
