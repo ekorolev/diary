@@ -58,9 +58,9 @@ module.exports = function ( opts ) {
 
 						console.log('Авторизация пользователя: ', body.screen_name, "id: ", body.id);
 
-						Users.findOne({ social_auth: "vk"+body.id }, function (err, user) {
-							if (err) error(res); else {
-
+						Users.findOne({ social_auth: "vk+"+body.id }, function (err, user) {
+							if (err) res.send({error: "db_error"}); else {
+								console.log('Есть пользователь?: ', user);
 								if (!user) {
 
 									// Пользователя не существует, перед созданием

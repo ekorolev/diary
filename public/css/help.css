@@ -1,0 +1,33 @@
+.innerK {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(0,0,0,0.6);
+	z-index: 9999;
+}
+#helper {
+	width: 700px;
+	height:400px;
+	margin-left: -350px;
+	margin-top: -200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	border: 1px solid silver;
+	border-radius: 10px;
+	z-index: 10000;
+}
+
+#helper .strelka { width: 250px; height: 250px; position: absolute; top: -10px; right: -100px; transform: rotate(-39deg);}
+#helper .hello {width: 500px; height: 50px; margin-left: 75px;	margin-top: 50px;}
+#helper .hello div {display: inline-block;}
+#helper .hello div.text { margin-left: 40px;line-height: 50px; height: 50px; font-size: 26px; position: relative; top: -12px;}
+#helper .what { margin-left: 75px; margin-top: 20px; font-size: 23px; margin-right: 50px;}
+#helper .what span {
+	display: inline-block;
+	border: 1px solid red;
+	border-radius: 5px; padding: 4px;
+}

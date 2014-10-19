@@ -3,6 +3,7 @@
 	<head>
 	</head>
 		<link rel='stylesheet' type='text/css' href='/css/style.css'>
+		<link rel='stylesheet' type='text/css' href='/css/help.css'>
 		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 		<script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js'></script>
@@ -44,6 +45,20 @@
 		</script>
 
 		<script id='dashboard' type='text/ractive'>
+			{{#if user.firstVisit }}
+				<div class='innerK' on-click='closeHelp'>
+					<div id='helper'>
+					<img src='/image/strelka.png' class='strelka'>
+					<div class='hello'>
+						<div class='img'><img src='{{user.photo_url}}'></div><div class='text'>Привет, {{user.first_name || user.printName }}</div>
+					</div>
+					<div class='what'>
+						Кажется, вы здесь впервые.<br><br> Не стоит пугаться! Попробуйте найти свои любимые книги, 
+						воспользовашись <span>поиском</span>
+					</div>
+				</div>
+				</div>
+			{{/if}}
 			<div id="wrapper">
 				<div class="mainLogo"><img src="../image/books/logo.png"></div>
 				<div class="backFadeSideBar"></div>
@@ -189,7 +204,6 @@
 		<script id="bookslist_view" type="text/ractive"> 
 				<ul>{{>books}}</ul>
 		</script>
-
 	<body>
 
 	</body>

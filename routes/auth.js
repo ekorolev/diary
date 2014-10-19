@@ -3,6 +3,22 @@ module.exports = function ( opts ) {
 	var app = opts.app;
 	var Users = opts.models.users;
 
+	app.post('/disableFirst', function (req, res) {
+		var user = req.user;
+		if (user) {
+			user.firstVisit = false;
+			user.save( function (err, user) {
+				if (!err) {
+					console.log('user: ', user);
+					res.send({
+						success: true,
+						user: user,
+					})
+				}
+			})
+		}
+	})
+
 	app.post('/signin', function (req, res) {
 		var login = req.body.login;
 		var password = req.body.password;

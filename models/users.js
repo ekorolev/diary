@@ -27,6 +27,8 @@ module.exports = function ( mongoose ) {
 
 		printName: String,
 
+		firstVisit: { type: Boolean, default: true },
+
 		// token
 		token: String,
 
