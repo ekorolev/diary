@@ -486,8 +486,8 @@ height: 15%;
 margin-left: 0;
 margin-top: 0;
 background-color: #3E3435;
-text-decoration:underline;
 color:white;
+border-bottom:1px solid white;
 }
  .moreDiscription
  {
