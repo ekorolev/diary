@@ -18,6 +18,7 @@
 
 		<script id='login' type='text/ractive'>
 			<div id="wrapper2">
+
 				<div class="backLogin"></div>
 				<div class="login">
 					<div class="loginTitle">
@@ -36,6 +37,7 @@
 					</div>
 					<div class="other">
 							<button type="button" class="logBut" on-click='auth'>Login</button>
+							<u on-click='vkauth'>VK</u>
 					</div>
 				</div>
 			</div>
@@ -119,7 +121,7 @@
 					</div>
 					<div class="proFileCont">
 					<BR><BR>
-						<p align="center" style='font-size: 23px'>Welcome, {{user.login}}!</p>
+						<p align="center" style='font-size: 23px'>Welcome, {{user.printName}}!</p>
 						<button type="button" class="proBut" on-click='signout'>Exit</button>
 					</div>
 				</div>
@@ -131,7 +133,7 @@
 					</div>
 					<div class="myDataCont">
 						{{#planBooks}}
-							<li class='planBook' on-click='show' book_id="{{this}}">{{planBooksObject[this].name}} <u on-click="NoReadP" book_id="{{this}}">X</u></li>
+							<li class='planBook' book_id="{{this}}"><span on-click='show'>{{planBooksObject[this].name}}</span> <u on-click="NoReadP" book_id="{{this}}">X</u></li>
 						{{/planBooks}}
 					</div>
 				</div>
