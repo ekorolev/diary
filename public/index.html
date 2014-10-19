@@ -18,7 +18,7 @@
 
 		<script id='login' type='text/ractive'>
 			<div id="wrapper2">
-
+				<div class="myLogo"><img src="../image/books/logo.png"></div>
 				<div class="backLogin"></div>
 				<div class="login">
 					<div class="loginTitle">
@@ -45,6 +45,7 @@
 
 		<script id='dashboard' type='text/ractive'>
 			<div id="wrapper">
+				<div class="mainLogo"><img src="../image/books/logo.png"></div>
 				<div class="backFadeSideBar"></div>
 				<div class='sideBar'>
 				</div>
@@ -152,35 +153,35 @@
 
 		<script id="book_view" type="text/ractive">
 				<div class="moreInfoData" book_id="{{book._id}}">
-					<div class="firstInfo">
-						<div class="moreImage">
-							<img src="../image/books/test_page.jpg" height="100%">
-						</div>
-						<div class="moreAbout">
-							<p class="name1">
-								{{book.name}}
-							</p>
-							<p class="autor1">
-								{{book.author}}
-							</p>
-							<p class="year1">
-								1926
-							</p>
-							<p class="ganre1">
-								Сатира, фантастика
-							</p>
-						</div>
-						<div class="myComm" on-click='clickNote' {{#if !isNote(book._id, user) }} default='true' {{/if}}>
-							{{#if isNote(book._id, user) }}
-								{{ isNote(book._id, user ) }}
-							{{else}}
-								Здесь вы можете оставить свои заметки
-							{{/if}}
-						</div>
-					</div>
 					<button on-click="saveNote" class='saveButton'>Сохранить</button>
-					<div class="moreDiscription">
-						{{book.description}}
+					<div class="moreDetails">
+						<div class="firstInfo">
+							<div class="moreImage">
+								<img src="../image/books/test_page.jpg" height="100%">
+							</div>
+							<div class="moreAbout">
+								<p class="name1">
+									{{book.name}}
+								</p>
+								<p class="autor1">
+									{{book.author}}
+								</p>
+								<p class="year1">
+									1926
+								</p>
+								<p class="ganre1">
+									Сатира, фантастика
+								</p>
+							</div>
+							<div class="myComm" on-click='clickNote' {{#if !isNote(book._id, user) }} default='true' {{/if}}>
+								{{#if isNote(book._id, user) }}
+									{{ isNote(book._id, user ) }}
+								{{else}}
+									Здесь вы можете оставить свои заметки
+								{{/if}}
+							</div>
+						</div>
+						<div class='moreDiscription'>{{book.description}}</div>
 					</div>
 				</div>
 		</script>
