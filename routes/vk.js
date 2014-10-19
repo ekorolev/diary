@@ -2,12 +2,13 @@ var request = require('request');
 
 
 module.exports = function ( opts ) {
+	var config = require('../config');
 	var app = opts.app;
 	var vk = {
-		key: "4595935",
-		secret: "TzAV80In7JNE2XmF1t93"
+		key: config.key,
+		secret: config.secret,
 	};
-	var return_uri = "http://diary.loc/return.html";
+	var return_uri = config.redirect;
 	var Users = opts.models.users;
 
 	app.get('/auth/vk', function (req, res) {
