@@ -395,6 +395,7 @@ ul
 	width:60%;
 	height:100%;
  }
+
  .name1
  {
 	position:relative;
@@ -431,6 +432,18 @@ ul
 	padding-left:15px;
 	font-size: 20pt;
  }
+.saveButton {
+background-color:white;
+position: absolute;
+top: 225px;
+left: 540px;
+height: 50px;
+width: 90px;
+border-radius: 3px;
+box-shadow: 2px 2px 4px black;
+font-family: "Open Sans", sans-serif;
+font-size: 14px;
+}
  .moreDiscription
  {
  		position:relative;
