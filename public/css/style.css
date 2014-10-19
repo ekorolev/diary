@@ -52,6 +52,28 @@ ul
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
  }
+ .myLogo
+ {
+	position:absolute;
+	top:0px;
+	background-color: #3E3435;
+	padding-left:460px;
+	width:100%;
+ }
+ .mainLogo
+ {
+	height:35px;
+	position:relative;
+	top:0px;
+	background-color: #3E3435;
+	padding-left:30px;
+	width:100%;
+	z-index:98432;
+ }
+ .mainLogo img
+ {
+	width:100px;
+ }
  .iamreaded
  {
 	text-decoration: underline;
@@ -74,7 +96,7 @@ ul
  .sideBar
  {
 	position:absolute;
-	top:0;
+	top:35px;
 	left:0;
 	width:20%;
 	height:100%;
