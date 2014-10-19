@@ -66,6 +66,7 @@ var SidebarView = Backbone.View.extend({
 				token: false
 			};
 		}
+		this.data.user = JSON.parse( localStorage.user );
 		this.data.planBooks = JSON.parse(localStorage.user).planBooks;
 		var user = JSON.parse( localStorage.user );
 		this.data.planBooksObject = JSON.parse(user.planBooksObject);

@@ -138,7 +138,7 @@ var BooksListView = Backbone.View.extend({
 						window.SidebarViewR.set("readBooksObject", JSON.parse(data.user.readBooksObject));
 						window.SidebarViewR.set("readBooks", data.user.readBooks);
 
-						window.BooksListViewR = new BooksListView("mybooks");
+						//window.BooksListViewR = new BooksListView("mybooks");
 					}
 				}
 			})

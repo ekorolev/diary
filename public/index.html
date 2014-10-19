@@ -61,36 +61,41 @@
 
 		<script id="book" type="text/ractive">
 		  {{#books}}
-				<li>
-					<div class="element" book_id="{{_id}}">
-						<div class="image">
-							<img src="{{photo_url}}" height="100%">
-						</div>
-						<div class="info">
-							<p class="autor" on-click="show">
-								{{name}}
-							</p>
-							<p class="ganre">
-								{{author}}
-							</p>
-							<p class="year">
-								year
-							</p>
-							<p class="discription">
-								{{#if isPlanBook(_id, user.planBooks )}}
-									В планах <u on-click='NoRead'>X</u>
-								{{else}}
-									<button on-click='wantToRead'>Хочу прочесть</button>
-								{{/if}}
-								{{#if isReadBook(_id, user.readBooks )}}
-									В прочтенных <u on-click='NoAlreadyRead'>X</u>
-								{{else}}
-									<button on-click='alreadyRead'>Читал</button>
-								{{/if}}
-							</p>
-						</div>
-					</div>
-				</li>
+						<li>
+							<div class="element"  book_id="{{_id}}">
+								<div class="image">
+									<img src="{{photo_url}}" height="100%">
+								</div>
+								<div class="info">
+									<p class="autor" on-click="show">
+										{{name}}
+									</p>
+									<p class="ganre">
+										{{author}}
+									</p>
+									<p class="year">
+										Year
+									</p>
+									<p class="discription">
+										Ganre
+									</p>
+									<div class="myBut">
+										{{#if !isPlanBook(_id, user.planBooks)&&!isReadBook(_id, user.readBooks) }}
+											<div class="butGreenOrRed" on-click='alreadyRead'>Читал</div>
+											<div class="butYellow" on-click='wantToRead'>В очередь</div>
+										{{/if}}
+
+										{{#if isPlanBook(_id, user.planBooks)}}
+											<div class='butYellow' on-click='NoRead'>Из очереди</div>
+										{{/if}}
+
+										{{#if isReadBook(_id, user.readBooks)}}
+											<div class='butGreenOrRed' on-click='NoAlreadyRead'>Не читал</div>
+										{{/if}}
+									</div>
+								</div>
+							</div>
+						</li>
 		  {{/books}}
 		</script>
 
