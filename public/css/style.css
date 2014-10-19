@@ -54,6 +54,7 @@ ul
  }
  .iamreaded
  {
+	text-decoration: underline;
 	position:absolute;
 	bottom:10px;
 	top:160px;
@@ -300,6 +301,10 @@ ul
 	font-family:"Oswald";
 	font-size:14pt;
  }
+ .planBook
+ {
+	
+ }
  .myData
  {
  	 	position:relative;
@@ -395,6 +400,7 @@ ul
 	width:60%;
 	height:100%;
  }
+
  .name1
  {
 	position:relative;
@@ -431,6 +437,25 @@ ul
 	padding-left:15px;
 	font-size: 20pt;
  }
+.saveButton {
+background-color:white;
+position: absolute;
+top: 225px;
+left: 540px;
+height: 50px;
+width: 90px;
+border-radius: 3px;
+box-shadow: 2px 2px 4px black;
+font-family: "Open Sans", sans-serif;
+font-size: 14px;
+cursor:pointer;
+}
+li.planBook {
+position: relative;
+font-size: 12pt;
+top: -16px;
+height: 5px;
+}
  .moreDiscription
  {
  		position:relative;
