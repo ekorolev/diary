@@ -52,14 +52,13 @@ ul
     -o-background-size: 100%; /* Opera 9.6+ */
     background-size: 100%; /* Современные браузеры */
  }
- .myLogo
- {
-	position:absolute;
-	top:0px;
-	background-color: #3E3435;
-	padding-left:460px;
-	width:100%;
- }
+.myLogo {
+position: absolute;
+top: 0px;
+background-color: #3E3435;
+padding-left: 460px;
+padding-right: 490px;
+}
  .mainLogo
  {
 	height:35px;
@@ -518,8 +517,7 @@ display: block;
  {
 	position:absolute;
 	top:250px;
-	left:34%;
-	width:30%;
+	width:25%;
 	height:250px;
 	z-index:2;
 	opacity: 0.4;
@@ -531,8 +529,7 @@ display: block;
  {
 	position:absolute;
 	top:250px;
-	left:34%;
-	width:30%;
+	width:45%;
 	height:250px;
 	z-index:3;
 	border-radius: 5px 5px 0px 0px;
