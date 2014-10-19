@@ -41,6 +41,10 @@ var BookView = Backbone.View.extend({
 					note: note
 				},
 				success: function (data) {
+					el.text("Сохранено!")
+					setTimeout(function () {
+						el.text('Сохранить');
+					}, 600);
 					self.data.user = data.user;
 					localStorage.setItem("user", JSON.stringify(data.user));
 					console.log('Заметка сохранена');

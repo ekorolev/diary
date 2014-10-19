@@ -69,7 +69,7 @@ module.exports = function ( mongoose ) {
 
 	s.pre('save', function (next) {
 		var self = this;
-		self.printName = self.login || self.screen_name || self.first_name;
+		self.printName = self.login || self.first_name || self.screen_name;
 		next();
 	})
 
