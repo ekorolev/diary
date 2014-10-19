@@ -170,29 +170,69 @@ ul
 	position:relative;
 	text-align:left;
 	font-weight: bold;
-	height:25%;
+	height:20%;
 	padding-left:15px;
  }
  .ganre
  {
  	position:relative;
 	text-align:left;
-	height:25%;
+	height:20%;
 	padding-left:15px;
  }
  .year
  {
  	position:relative;
 	text-align:left;
-	height:25%;
+	height:20%;
 	padding-left:15px;
  }
  .discription
  {
  	position:relative;
 	text-align:left;
-	height:25%;
+	height:20%;
 	padding-left:15px;
+ }
+ .myBut
+ {
+	position:relative;
+	text-align:left;
+	height:20%;
+	padding-left:15px;
+ }
+ .butGreenOrRed
+ {
+	 background-color:#007F0E;
+	position:relative;
+	text-align:center;
+	font-weight:bold;
+	width:100px;
+	cursor:pointer;
+	font-family:"Oswald";
+ }
+  .butRed
+ {
+	background-color:Red;
+	position:relative;
+	text-align:center;
+	font-weight:bold;
+	width:100px;
+	cursor:pointer;
+	font-family:"Oswald";
+ }
+ .butYellow
+ {
+	 background-color: 47B3E2;
+	position:absolute;
+	top:0px;
+
+	font-weight:bold;
+	left: 150px;
+	text-align:center;
+	width:100px;
+	font-family:"Oswald";
+	cursor:pointer;
  }
  .proFile
  {
@@ -320,7 +360,7 @@ ul
 	width:30%;
 	height:240px;
 	overflow-y:auto;
-	
+	font-family:"Roboto";
  }
  .moreAbout
  {
