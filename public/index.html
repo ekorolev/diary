@@ -47,11 +47,13 @@
 				<div class='sideBar'>
 				</div>
 					<div class="mainCont">
-					<div class="backFadeSearch"></div>
-					<div class="search">
-							<input type="text" class="searchDesign" placeholder="Search by books...    " on-keyup='search'>
-							<input type="image" class="searchImage">
-					</div>
+						<div class="backFadeSearch"></div>
+						<div class="search">
+							<form>
+								<input type="text" class="searchDesign" placeholder="Search by books...    " on-key='search'>
+								<div class="searchImage"></div>
+							</form>
+						</div>
 					<div class='listData'>
 
 					</div>
@@ -90,7 +92,7 @@
 										{{/if}}
 
 										{{#if isReadBook(_id, user.readBooks)}}
-											<div class='butGreenOrRed' on-click='NoAlreadyRead'>Не читал</div>
+											<div class='butRed' on-click='NoAlreadyRead'>Не читал</div>
 										{{/if}}
 									</div>
 								</div>
