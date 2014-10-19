@@ -49,10 +49,8 @@
 					<div class="mainCont">
 						<div class="backFadeSearch"></div>
 						<div class="search">
-							<form>
 								<input type="text" class="searchDesign" placeholder="Search by books...    " on-keyup='search'>
 								<div class="searchImage"></div>
-							</form>
 						</div>
 					<div class='listData'>
 
@@ -62,6 +60,16 @@
 		</script>
 
 		<script id="book" type="text/ractive">
+			{{#if books.length==0}}
+				<BR><BR>
+				<p align='center' style='font-size: 30px;'>
+					Список пуст
+				</p>
+				<p align='center' style='font-size: 30px;'>
+					Используйте поиск и найдите ваши любимые книги здесь!
+				</p>
+				<BR><BR>
+			{{/if}}
 		  {{#books}}
 						<li>
 							<div class="element"  book_id="{{_id}}">
@@ -109,6 +117,8 @@
 						ProFile
 					</div>
 					<div class="proFileCont">
+					<BR><BR>
+						<p align="center" style='font-size: 23px'>Welcome, {{user.login}}!</p>
 						<button type="button" class="proBut" on-click='signout'>Exit</button>
 					</div>
 				</div>
@@ -120,7 +130,7 @@
 					</div>
 					<div class="myDataCont">
 						{{#planBooks}}
-							<li>{{planBooksObject[this].name}} <u on-click="NoReadP" book_id="{{this}}">X</u></li>
+							<li on-click='show' book_id="{{this}}">{{planBooksObject[this].name}} <u on-click="NoReadP" book_id="{{this}}">X</u></li>
 						{{/planBooks}}
 					</div>
 				</div>

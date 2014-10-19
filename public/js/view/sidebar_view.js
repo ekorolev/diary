@@ -54,6 +54,13 @@ var SidebarView = Backbone.View.extend({
 		window.SidebarViewR.on('iAmReaded', function (event) {
 			window.BooksListViewR = new BooksListView('mybooks');
 		})
+
+		window.SidebarViewR.on("show", function (event) {
+			var el = $(event.original.target);
+			var id = el.attr('book_id');
+			console.log('id книги: ', id);
+			window.BooksViewR = new BookView(id);
+		})
 	},
 	initialize: function (opts) {
 		var token = localStorage.token;

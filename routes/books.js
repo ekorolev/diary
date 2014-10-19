@@ -102,7 +102,15 @@ module.exports = function (opts) {
 					$in: req.user.readBooks
 				}
 			};
-		} else {
+		}
+		if (data.query =='myplans') {
+			queryObj = {
+				_id: {
+					$in: req.user.planBooks
+				}
+			}
+		} 
+		if (!queryObj) {
 			var regex = new RegExp(data.query);
 			queryObj = {
 				$or: [
