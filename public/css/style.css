@@ -130,6 +130,23 @@ ul
 	border-radius: 3px;
 	box-shadow: 2px 2px 4px black;
  }
+ .homeImage
+ {
+	position:absolute;
+	top:9px;
+	left: 30px;
+	background: url(../image/books/home.png);
+	background-position: 27px 0px;
+	background-repeat:no-repeat;
+	border:none;
+	background-color: #14B08D;
+	cursor:pointer;
+	height :30px;
+	width: 80px;
+	outline:none;
+	border-radius: 3px;
+	box-shadow: 2px 2px 4px black;
+ }
  .searchImage
  {
 	position:absolute;
