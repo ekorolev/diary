@@ -21,7 +21,7 @@ var SidebarView = Backbone.View.extend({
 			window.user = {};
 			localStorage.setItem("token", "");
 			localStorage.setItem("user", "");
-			window.location.href='#';
+			window.location.href='#login';
 		})
 
 
@@ -54,6 +54,8 @@ var SidebarView = Backbone.View.extend({
 		window.SidebarViewR.on('iAmReaded', function (event) {
 			window.BooksListViewR = new BooksListView('mybooks');
 		})
+
+
 
 		window.SidebarViewR.on("show", function (event) {
 			var el = $(event.original.target);

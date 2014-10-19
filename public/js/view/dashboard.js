@@ -25,6 +25,10 @@ var DashboardView = Backbone.View.extend({
 
 				window.BooksListViewR = new BooksListView(query);
 			}
+		});
+
+		window.DashboardViewR.on("main", function (event) {
+			window.location.href='#';
 		})
 	},
 	initialize: function (opts) {
