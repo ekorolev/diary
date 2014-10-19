@@ -584,14 +584,14 @@ z-index: 10;
 }
 .altLogIn {
 position: absolute;
-top: 70px;
+top: 65px;
 left: 418px;
 z-index: 10;
 }
  .logBut {
 position: absolute;
 left: 66px;
-top: 0px;
+top: 90px;
 font-family: 'Roboto', sans-serif;
 font-size: 14px;
 font-weight: 700;
@@ -621,7 +621,7 @@ color: white;
  .passwordInput
  {
  	position:relative;
-	left:100px;
+	left:-1px;
 	top:-15px;
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
