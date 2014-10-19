@@ -478,10 +478,11 @@ ul
   {
   position:absolute;
   left:100px;
+  top:85px;
 font-family: 'Roboto', sans-serif;
 font-size: 14px;
 font-weight: 700;
-width: 220px;
+width: 228px;
 padding: 9px 87px;
 cursor: pointer;
 text-transform: uppercase;
@@ -498,7 +499,8 @@ background-color: #009fe3;
 	font-weight: 700;
 	width: 220px;
 	height: 40px;
-	padding: 7px 7px 7px 7px;
+	margin-bottom:10px;
+	padding-left:7px;
 	color: #6f6f6f;
 	border-radius: 3px;
 	box-shadow: 2px 2px 4px black;
