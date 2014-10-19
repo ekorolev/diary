@@ -67,8 +67,15 @@ ul
 	top:0px;
 	background-color: #3E3435;
 	padding-left:30px;
-	width:100%;
 	z-index:98432;
+ }
+ .moreDetails
+ {
+list-style-type: none;
+background-color: white;
+margin: 15px;
+border-radius: 5px 5px 0px 0px;
+border-top: 6px solid #3E3435;
  }
  .mainLogo img
  {
@@ -251,7 +258,7 @@ ul
  }
  .butGreenOrRed
  {
-	 background-color:#007F0E;
+	 background-color:#14B08D;
 	position:relative;
 	text-align:center;
 	font-weight:bold;
@@ -431,7 +438,6 @@ ul
  {
 	position:relative;
 	height:25%;
-	color:white;
 	text-align:left;
 	padding-left:15px;
 	font-size: 20pt;
@@ -440,7 +446,6 @@ ul
  {
 	position:relative;
 	height:25%;
-	color:white;
 	text-align:left;
 	padding-left:15px;
 	font-size: 20pt;
@@ -449,7 +454,6 @@ ul
  {
 	position:relative;
 	height:25%;
-	color:white;
 	text-align:left;
 	padding-left:15px;
 	font-size: 20pt;
@@ -458,13 +462,12 @@ ul
  {
 	position:relative;
 	height:25%;
-	color:white;
 	text-align:left;
 	padding-left:15px;
 	font-size: 20pt;
  }
 .saveButton {
-background-color:white;
+background-color:3E3435;
 position: absolute;
 top: 225px;
 left: 540px;
@@ -486,7 +489,7 @@ height: 5px;
  .moreDiscription
  {
  		position:relative;
-		height:220px;
+		height:240px;
 		font-size: 15pt;
 		text-align:justify;
 		top:30px;
@@ -494,8 +497,6 @@ height: 5px;
 		background-color:white;
 		margin: 15px;
 		padding: 10px;
-		border-radius: 5px 5px 0px 0px;
-		border-top:6px solid #3E3435;
  }
  .backLogin
  {
