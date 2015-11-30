@@ -27,6 +27,10 @@ var AppRouter = Backbone.Router.extend({
 	},
 	initialize: function () {
 		console.log('start app');
+		var auth = localStorage.getItem('user');
+		if (!auth) {
+			window.location.href='/#login';
+		}
 
 	}
 });
